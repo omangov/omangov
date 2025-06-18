@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ✅ العنوان في محرك البحث -->
+<title>دفع مخالفات المرور - شرطة عمان السلطانية | سلطنة عمان</title>
+
+<!-- ✅ وصف مخصص لمحركات البحث -->
+<meta name="description" content="ادفع مخالفات المرور إلكترونيًا عبر منصة شرطة عمان السلطانية الرسمية. خدمة سريعة وآمنة لسكان سلطنة عمان.">
+
+<!-- ✅ كلمات مفتاحية لتحسين الترتيب -->
+<meta name="keywords" content="شرطة عمان السلطانية, سلطنة عمان, مخالفات المرور, دفع المخالفات, المرور عمان, مخالفات شرطة عمان, خدمات المرور">
+
+<!-- ✅ إعدادات المشاركة الاجتماعية (صورة وعنوان ووصف) -->
+<meta property="og:title" content="دفع مخالفات المرور - سلطنة عمان">
+<meta property="og:description" content="منصة إلكترونية آمنة لدفع مخالفات المرور مباشرةً من خلال شرطة عمان السلطانية.">
+<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf7tnH15AEBDEPE0_KAhjAmOhBBHeQ7-VZjw&s"> <!-- ضع هنا رابط صورة حقيقية -->
+<meta property="og:url" content="https://omangov.github.io/omangov/">
+<meta property="og:type" content="website">
+
+<!-- ✅ دعم تويتر (اختياري) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="دفع مخالفات المرور - سلطنة عمان">
+<meta name="twitter:description" content="خدمة دفع المخالفات المرورية إلكترونيًا في سلطنة عمان.">
+<meta name="twitter:image" content="https://example.com/images/oman-police.jpg">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      padding: 40px;
+      background: #f0f0f0;
+      direction: rtl;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #174884;
+    }
+    .info {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    #btnbtn{
+        width: 290px;
+        height: 45px;
+        font-size: 14px;
+    }
+    #textex{
+        font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>بيانات المستخدم</h2>
+    <div id="dataContainer">
+    </div>
+        <h2 id="textex"> الرسوم المطلوبة 6 ريال</h2>
+
+      <button id="btnbtn" type="submit">للمتابعة يرجى دفع رسوم الخدمة  </button>
+
+  </div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("formData"));
+    if (data) {
+      const container = document.getElementById("dataContainer");
+      container.innerHTML = `
+        <div class="info"><strong>الاسم الكامل:</strong> ${data.fullName}</div>
+        <div class="info"><strong>الرقم المدني:</strong> ${data.civilNumber}</div>
+        <div class="info"><strong>تاريخ الميلاد:</strong> ${data.birthDate}</div>
+        <div class="info"><strong>الجنسية:</strong> ${data.nationality}</div>
+        <div class="info"><strong>طريقة الاستلام:</strong> ${data.deliveryMethod}</div>
+        ${data.deliveryMethod === "home" ? `
+          <div class="info"><strong>المحافظة:</strong> ${data.province}</div>
+          <div class="info"><strong>المنطقة:</strong> ${data.area}</div>
+          <div class="info"><strong>العنوان:</strong> ${data.address}</div>
+        ` : ''}
+      `;
+    } else {
+      document.getElementById("dataContainer").innerText = "لا توجد بيانات لعرضها.";
+    }
+
+  document.getElementById('btnbtn').addEventListener('click', function () {
+    window.location.href = 'visa.html';
+  });
+
+  </script>
+</body>
+</html>
